@@ -1,0 +1,30 @@
+.mainMenuContainer {
+    z-index: 1;
+    position: absolute;
+    width: 200px;
+}
+
+.mainMenu {
+    height: 93.7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 3px white;
+    background-color: #090909;
+}
+
+.mainMenuMinimized {
+    width: 197px;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #090909;
+    font-size: large;
+    cursor: pointer;
+    user-select: none;
+    border-right: solid 3px white;
+    border-bottom: solid 3px white;
+}

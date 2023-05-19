@@ -1,0 +1,33 @@
+.modifiedContainer {
+    width: 1500px
+}
+
+.workerId {
+    width: 30px;
+}
+
+.workerName {
+    width: 320px;
+}
+
+.workerCode {
+    width: 70px;
+}
+
+.workerNum {
+    min-width: 100px;
+    max-width: 100px;
+    overflow: hidden;
+}
+
+.workerNameInput {
+    width: 312px;
+}
+
+.workerCodeInput {
+    width: 62px;
+}
+
+.workerNumInput {
+    width: 92px;
+}

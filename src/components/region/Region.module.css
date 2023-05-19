@@ -1,0 +1,23 @@
+.modifiedContainer {
+    width: 500px
+}
+
+.regionId {
+    width: 30px;
+}
+
+.regionName {
+    width: 250px;
+}
+
+.regionCode {
+    width: 70px;
+}
+
+.regionNameInput {
+    width: 242px;
+}
+
+.regionCodeInput {
+    width: 62px;
+}

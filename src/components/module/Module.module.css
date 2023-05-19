@@ -1,0 +1,8 @@
+.module {
+   padding: 0;
+}
+
+.module a {
+    text-decoration: none;    
+    color: white;
+}

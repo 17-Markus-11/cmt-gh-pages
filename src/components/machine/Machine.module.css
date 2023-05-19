@@ -1,0 +1,25 @@
+.modifiedContainer {
+    width: 600px
+}
+
+.machineId {
+    width: 30px;
+}
+
+.machineName {
+    width: 320px;
+}
+
+.machineNum {
+    min-width: 80px;
+    max-width: 80px;
+    overflow: hidden;
+}
+
+.machineNameInput {
+    width: 312px;
+}
+
+.machineNumInput {
+    width: 72px;
+}

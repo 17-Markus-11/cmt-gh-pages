@@ -1,0 +1,33 @@
+.tableContainer {
+    padding: 10px 30px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #090909;
+}
+
+.itemContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 1px white;
+    text-align: center;
+}
+
+.controlPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.button {
+    width: 16px;
+}
+
+.tableHeader {
+    font-size: small;
+}

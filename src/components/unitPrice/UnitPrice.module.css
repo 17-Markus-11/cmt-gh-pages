@@ -1,0 +1,384 @@
+.upgTopContainer {
+    width: 100%;
+}
+
+.controllContainer {
+    margin: 10px 20px 50px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: center;
+    color: white;
+}
+
+.controllSwitch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.controllSwitchItem {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 120px;
+    background-color: #090909;
+    cursor: pointer;
+    user-select: none;
+}
+
+.controllSwitchItemActive {
+    background-color: white;
+    color: #090909;
+}
+
+.headerContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+
+.headerBaseInfo {
+    margin-left: 84px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    height: 35px;
+}
+
+.headerBaseInfoCode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 147px;
+}
+
+.headerBaseInfoName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 757px;
+}
+
+.headerBaseInfoUnits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70px;
+    border: solid 1px white;
+}
+
+.headerUnitData {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.headerUnitDataPrice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70px;
+    border: solid 1px white;
+    font-size: small;
+}
+
+.headerUnitDataPriceUnits {
+    font-size: smaller;
+}
+
+.headerUnitPropertiesStatus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 130px;
+    border: solid 1px white;
+}
+
+.headerUnitPropertiesNote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 368px;
+    border: solid 1px white;
+}
+
+.tableUnitPropertiesStatus {
+    font-size: small;
+    min-width: 130px;
+}
+
+.tableUnitPropertiesNote {
+    font-size: small;
+    min-width: 368px;
+    text-align: left;
+}
+
+.upgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px;
+    color: white;
+}
+
+.upgItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* margin-left: 21px; */
+}
+
+.upgItemBorderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.upgItemBorder {
+    margin-left: 10px;
+    border-left: solid 1px white;
+    border-bottom: solid 1px white;
+    height: calc(100% - 25px);
+}
+
+.upgItemBorderButton {
+    padding-top: 4px;
+    min-height: 21px;
+    min-width: 21px;
+}
+
+.upgItemContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.upgItemContentData {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+}
+
+.tableContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    /* border-right: solid 2px white;
+    border-left: solid 2px white; */
+    height: 100%;
+}
+
+.tableItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+    width: 70px;
+    border: solid 1px white;
+    font-size: small
+}
+
+.tableEnlargementName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    border: solid 1px white;
+}
+
+.tableEnlargementCode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80px;
+    border: solid 1px white;
+}
+
+.tableEnlargementCoef {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 66px;
+    border: solid 1px white;
+    font-size: small;
+    max-height: 33px;
+}
+
+.dataContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* align-items: center; */
+    height: 100%;
+}
+
+.dataCode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* text-align: center;  */
+    padding-left: 5px;
+    font-weight: bold;
+    width: 140px;
+}
+
+.dataCode a {
+    text-emphasis: none;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.dataName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* text-align: center;  */
+    padding-left: 8px;
+    width: 750px;
+    /* margin-left: 10px; */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.dataBorder {
+    border: solid 1px white;
+    padding-left: 5px;
+    /* font-size: small; */
+}
+
+/* unit price calculations */
+
+.unitPriceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+.unitPriceExpenses {
+    margin: 20px;
+}
+
+.upeHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 30px; */
+    text-align: center;
+}
+
+.upeHeaderTitle {
+    text-align: left;
+    font-size: large;
+}
+
+.upeHeaderCalculation {
+    border: solid 2px white;
+    border-bottom: none;
+    width: 253px;
+}
+
+.upeSummary {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px white;
+}
+
+.upeSummaryHeader {
+    display: flex;
+    flex-direction: row;
+    height: 22px;
+    text-align: center;
+    border: solid 1px white;    
+    background-color: #090909;
+}
+
+.upeSummaryData {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 35px;
+    border: solid 1px white;
+}
+
+.upeSummaryCode, .upeSummaryName, .upeSummaryUnits, .upeSummaryWorkerLaborCost, .upeSummaryMachineLaborCost,
+.upsCode, .upsName, .upsDescription {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 1px white;
+    text-align: center;
+}
+
+.upeSummaryCode {
+    width: 150px;
+}
+
+.upeSummaryName {
+    width: 590px;
+    /* padding-left: 10px;
+    text-align: left; */
+}
+
+.upeSummaryUnits {
+    width: 100px;
+}
+
+.upeSummaryWorkerLaborCost {
+    width: 125px;
+}
+
+.upeSummaryMachineLaborCost {
+    width: 125px;
+}
+
+.upsCode {
+    width: 70px;
+}
+
+.upsName {
+    width: 230px;
+}
+
+.upsDescription {
+    width: 800px;
+}
+
+.unitPriceSpecification {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.unitPriceSpecificationHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.unitPriceTableContainer {
+    border: solid 2px white;
+}
+
+.spacer {
+    height: 40px;
+}

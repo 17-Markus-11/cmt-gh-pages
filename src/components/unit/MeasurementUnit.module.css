@@ -1,0 +1,23 @@
+.modifiedContainer {
+    width: 500px
+}
+
+.measurementUnitId {
+    width: 30px;
+}
+
+.measurementUnitName {
+    width: 250px;
+}
+
+.measurementUnitCode {
+    width: 70px;
+}
+
+.measurementUnitNameInput {
+    width: 242px;
+}
+
+.measurementUnitCodeInput {
+    width: 62px;
+}

@@ -1,0 +1,133 @@
+.container {
+    padding: 10px 30px 30px 30px;
+    width: 1500px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: #090909;
+}
+
+.structure {
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+    border-right: solid 1px white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.structureHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.structureHeaderItem {
+    text-align: center;
+    width: 90px;
+}
+
+.structureHeaderItemName {
+    text-align: center;
+    width: 200px;
+}
+
+.structureData {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.structureDataItem {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    height: 40px;
+    align-items: center;
+}
+
+.sdiGroup {
+    display: flex;
+    justify-content: center;
+    width: 90px;
+}
+
+.sdiName {
+    text-align: center;
+    width: 200px;
+}
+
+.sdiDate {
+    text-align: center;
+    width: 90px;
+}
+
+.chart {
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.chartHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 50px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.chartHeaderItem {
+    width: 480px;
+    height: 100%;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+}
+
+.chartHeaderTop {
+    height: 60%;
+}
+
+.chartHeaderBottom {
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+}
+
+.chartHeaderBottomItem {
+    min-width: 40px;
+}
+
+.chartData {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.chartDataItemContainer {
+    margin-top: 10px;
+}
+
+.chartDataItem {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.chartDataItemGreen {
+    border-radius: 5px;
+    background-color: darkgreen;
+    border: solid 1px white;
+}
+
+.chartDataItemBlue {
+    border-radius: 5px;
+    background-color: darkblue;
+    border: solid 1px white;
+}

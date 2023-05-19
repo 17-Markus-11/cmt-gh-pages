@@ -1,0 +1,71 @@
+.guideContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 250px;
+    width: 500px;
+    margin-top: 20px;
+    border: solid 2px white;
+}
+
+.guideContainer h3 {
+    text-align: center;
+}
+
+.guideRegion {
+    position: relative;
+    margin: 10px;
+}
+
+.guideRegion select { 
+    background-color: #080808;
+    border: solid 1px white;
+    color: white;
+    height: 30px;
+    width: 200px;
+    font-size: medium;
+    text-align: center;
+}
+
+.guideFile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.guideFile input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.fileLabel {
+    cursor: pointer;
+    background-color: #080808;
+    padding: 5px;
+    border: solid 1px white;
+    font-size: large;
+}
+
+.guideSubmit {
+    margin: 10px;
+}
+
+.guideSubmit button {
+    color: white;
+    background-color: #080808;
+    border: solid 1px white;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: large;
+    height: 40px;
+    width: 200px;
+}

@@ -1,0 +1,41 @@
+.tasksPanel {
+    grid-area: t;
+    background-color: #090909;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+} 
+
+.header {
+    color: white;
+    font-size: large;
+    margin-top: 18px;
+}
+
+.tasksContainer {
+    border-left: solid 3px white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.taskContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    width: 100%;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
+
+.taskName {
+    font-size: x-large;
+}
