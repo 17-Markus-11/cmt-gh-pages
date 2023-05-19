@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const Api = axios.create({
-    baseURL: 'https://localhost:7016/'
+    baseURL: 'http://cmttest-001-site1.ctempurl.com/'
 });
 
 export default Api;
