@@ -1,0 +1,61 @@
+{
+    "table": {
+        "id": "Id",
+        "name": "Name",
+        "code": "Code",
+        "regionId": "Region Id",
+        "region": "Region",
+        "costPerHour": "Cost per hour",
+        "directPayment": "Direct payment",
+        "personalIncomeTax": "Personal income tax",
+        "insurancePremiums": "Insurance premiums",
+        "vacationAllowance": "Vacation allowance",
+        "qualificationCosts": "Qualification costs",
+        "obtainingWorkPermitsCosts": "Obtaining work permits costs",
+        "consumablesCost": "Consumables cost",
+        "crampedConditions": "Cramped conditions",
+        "workerLaborCostPerUnit": "Worker labor cost per unit",
+        "machineLaborCostPerUnit": "Machine labor cost per unit",
+        "workerPaymentPerHour": "Worker payment per hour",
+        "workerPaymentPerUnit": "Worker payment per unit",
+        "machineOperationCostPerHour": "Machine operation cost per hour",
+        "machineOperationCostPerUnit": "Machine operation cost per unit",
+        "directCostPerUnit": "Direct cost per unit",
+        "note": "Note",
+        "status": "Status",
+        "type": "Type",
+        "unitId": "Unit Id",
+        "unit": "Unit",
+        "parentId": "Parent Id",
+        "parent": "Parent"
+    },
+
+    "diagram": {
+        "group": "Group",
+        "name": "Name",
+        "start": "Start",
+        "end": "End",
+        "january": "Jan",
+        "february": "Feb",
+        "march": "Mar",
+        "april": "Apr",
+        "may": "May",
+        "june": "Jun",
+        "july": "Jul",
+        "august": "Aug",
+        "september": "Sep",
+        "october": "Oct",
+        "november": "Now",
+        "december": "Dec"
+    },
+
+    "menu": {
+        "diagram": "Diagram",
+        "machines": "Machines",
+        "workers": "Workers",
+        "regions": "Regions",
+        "projects": "Projects",
+        "measurementUnits": "Measurement Units",
+        "unitPriceGuide": "Unit Price Guide"
+    }
+}

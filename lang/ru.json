@@ -1,0 +1,61 @@
+{
+    "table": {
+        "id": "№",
+        "name": "Название",
+        "code": "Код",
+        "regionId": "Регион №",
+        "region": "Регион",
+        "costPerHour": "Стоимость за час",
+        "directPayment": "Зарплата (на руки)",
+        "personalIncomeTax": "НДФЛ",
+        "insurancePremiums": "Страховые взносы",
+        "vacationAllowance": "Резерв на оплату отпусков",
+        "qualificationCosts": "Сертификация, обучение, квалификация",
+        "obtainingWorkPermitsCosts": "Расходы на оформление разрешений на работу",
+        "consumablesCost": "Расходы на инвентарь, расходные материалы",
+        "crampedConditions": "Стесненные условия",
+        "workerLaborCostPerUnit": "Трудозатраты Рабочих",
+        "machineLaborCostPerUnit": "Трудозатраты Машин и Механизмов",
+        "workerPaymentPerHour": "Оплата Рабочих за час",
+        "workerPaymentPerUnit": "Оплата Рабочих за единицу",
+        "machineOperationCostPerHour": "Эксплуатация Машин и Механизмов за час",
+        "machineOperationCostPerUnit": "Эксплуатация Машин и Механизмов за единицу",
+        "directCostPerUnit": "Прямые затраты за единицу",
+        "note": "Заметки",
+        "status": "Статус",
+        "type": "Тип",
+        "unitId": "Единицы измерения",
+        "unit": "Единицы измерения",
+        "parentId": "Базовая расценка",
+        "parent": "Базовая расценка"
+    },
+
+    "diagram": {
+        "group": "Группа",
+        "name": "Название",
+        "start": "Начало",
+        "end": "Конец",
+        "january": "Янв",
+        "february": "Фев",
+        "march": "Мар",
+        "april": "Апр",
+        "may": "Май",
+        "june": "Июн",
+        "july": "Июл",
+        "august": "Авг",
+        "september": "Сен",
+        "october": "Окт",
+        "november": "Ноя",
+        "december": "Дек"
+    },
+
+    "menu": {
+        "diagram": "Диаграмма",
+        "machines": "Машины и Механизмы",
+        "workers": "Рабочие",
+        "regions": "Регионы",
+        "projects": "Проекты",
+        "measurementUnits": "Единицы измерения",
+        "unitPriceGuide": "Справочник единичных расценок"
+    }
+}
