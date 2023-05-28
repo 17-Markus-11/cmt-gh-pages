@@ -23,6 +23,17 @@ const unitPriceService = {
 
     deleteUnitPrice(id: number): Promise<UnitPriceInfo> {
         return Api.delete<UnitPriceInfo>(`${UNIT_PRICE_SERVICE_ROUTE}/${id}`).then(res => res.data);
+    },
+    
+    uploadUpgFile(file: File): Promise<any> {
+        let formData = new FormData();
+        formData.append("file", file);
+      
+        return Api.postForm<any>(`${UNIT_PRICE_SERVICE_ROUTE}/import`, formData, {
+            headers: {
+                "Content-Type": "multipart/form-data",
+            },
+        }).then(res => res.data);
     }
 }
 

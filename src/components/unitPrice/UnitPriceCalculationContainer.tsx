@@ -4,27 +4,10 @@ import { AppStore } from "../../store/redusers/redux-store";
 import { UnitPriceStatuses, UnitPriceTypes } from "../../store/types/unit-price/UnitPriceRequest";
 import { MeasurementUnitInfo } from "../../store/types/unit/MeasurementUnitInfo";
 import UnitPriceCalculation from "./UnitPriceCalculation";
-import { UnitPriceItem } from "./UnitPriceContainer";
 import { compose } from "redux";
 import { withRouter } from "react-router-dom";
 import { getUnitPriceById } from "../../store/actions/unit-price-actions";
-
-const mpUnit: MeasurementUnitInfo = {
-    id: 1,
-    name: "метр погонный",
-    code: "мп"
-}
-
-const mockData: UnitPriceItem = {
-    id: 9,
-    name: "Монтаж внутреннего пластикового трубопровода из ПВХ, от Ду 15 до Ду 80",
-    code: "НТТ-00-02-02-01",
-    inGroupOrder: 1,
-    type: UnitPriceTypes.Item,
-    status: UnitPriceStatuses.TemporaryRegulations,
-    unit: mpUnit,
-    childs: []
-};
+import { UnitPriceInfo } from "../../store/types/unit-price/UnitPriceInfo";
 
 export interface UnitPriceResourceInfo {
     index: number,
@@ -96,7 +79,7 @@ const specificationItems: UnitPriceSpecificationInfo[] = [
 
 const mapState = (store: AppStore) => {
     return ({
-        item: mockData, // store.unitPricesData.activeUnitPrice
+        item: store.unitPricesData.activeUnitPrice,
         resourceItems: resourceItems,
         specificationItems: specificationItems
     });

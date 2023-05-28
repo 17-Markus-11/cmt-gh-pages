@@ -1,26 +1,18 @@
 import { connect } from "react-redux";
 import { AppStore } from "../../store/redusers/redux-store";
-import { createProject, deleteProject, editProject, getProjects } from "../../store/actions/project-actions";
+import { getProjectById, uploadStructureFile, uploadSmtrFile, connectUpgToProject } from "../../store/actions/project-actions";
 import Project from "./Project";
 import { withRouter } from "react-router-dom";
 import { compose } from "redux";
-import { ProjectInfo } from "../../store/types/project/ProjectInfo";
 import { switchToModule } from "../../store/actions/menu-actions";
-
-const project: ProjectInfo = {
-    id: 1,
-    name: "Project Zomboid"
-}
 
 const mapState = (store: AppStore) => {
     return ({
-        item: project
+        item: store.projectsData.activeProject
     });
 }
 
-const getProjectById = (id: number) => {}
-
 export default compose<React.ComponentType>(
-    connect(mapState, {getProjectById, switchToModule}),
+    connect(mapState, {getProjectById, uploadStructureFile, uploadSmtrFile, connectUpgToProject, switchToModule}),
     withRouter
 )(Project);

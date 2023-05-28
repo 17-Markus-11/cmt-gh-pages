@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
 import { AppStore } from "../../store/redusers/redux-store";
-import style from './Guide.module.css';
 import Guide from "./Guide";
 import { getRegions } from "../../store/actions/region-actions";
+import { uploadUpgFile } from "../../store/actions/unit-price-actions";
 
 const mapState = (store: AppStore) => {
     return ({
@@ -10,4 +10,4 @@ const mapState = (store: AppStore) => {
     });
 }
 
-export default connect(mapState, {getRegions})(Guide);
+export default connect(mapState, {getRegions, uploadUpgFile})(Guide);

@@ -49,5 +49,12 @@ export const deleteUnitPrice = (id: number): Thunk => {
     }
 }
 
+export const uploadUpgFile = (file: File): Thunk => {
+    return async (dispatch: Dispatch) => {
+        const data = await unitPriceService.uploadUpgFile(file);
+        //TODO: dispatch
+    }
+}
+
 export type UnitPriceActions = AppActions<typeof actions>
 type Thunk = AppThunk<UnitPriceActions | FormAction>

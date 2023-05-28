@@ -1,9 +1,27 @@
 import { MeasurementUnitInfo } from "../unit/MeasurementUnitInfo";
-import { ParentUnitPriceResponse } from "./ParentUnitPriceInfo";
-import { UnitPriceRequest } from "./UnitPriceRequest";
+import { UnitPriceStatuses, UnitPriceTypes } from "./UnitPriceRequest";
 
-export interface UnitPriceInfo extends UnitPriceRequest {
+export interface UnitPriceInfo {    
     id: number,
-    parent: ParentUnitPriceResponse | undefined,
-    unit: MeasurementUnitInfo | undefined
+    name: string,
+    code: string,
+    inGroupOrder: number,
+    type: UnitPriceTypes,
+    status: UnitPriceStatuses,
+    unit: MeasurementUnitInfo
+    workerLaborCostPerUnit: number,
+    machineLaborCostPerUnit: number,
+    workerPaymentPerHour: number,
+    workerPaymentPerUnit: number,
+    machineOperationCostPerHour: number,
+    machineOperationCostPerUnit: number,
+    directCostPerUnit: number,
+    enlargement1Code: string,
+    enlargement1Name: string,
+    enlargement1Coeficient: number,
+    enlargement2Code: string,
+    enlargement2Name: string,
+    enlargement2Coeficient: number,
+    note: string,
+    childs: Array<UnitPriceInfo>
 }

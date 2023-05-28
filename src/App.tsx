@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, ReactNode} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import HeaderContainer from './components/header/HeaderContainer';
@@ -14,9 +14,12 @@ import MainMenuContainer from './components/mainMenu/MainMenuContainer';
 import GuideContainer from './components/guide/GuideContainer';
 import UnitPriceCalculationContainer from './components/unitPrice/UnitPriceCalculationContainer';
 import ProjectContainer from './components/project/ProjectContainer';
+import WorkingGroupContainer from './components/workingGroup/WorkingGroupContainer';
+import SmtrContainer from './components/smtr/SmtrContainer';
+import StructureContainer from './components/structure/StructureContainer';
 
 class App extends Component {
-  render(): React.ReactNode {
+  render(): ReactNode {
     return (
       <div className='app-wrapper'>
         <HeaderContainer />
@@ -24,15 +27,20 @@ class App extends Component {
         <div className='app-wrapper-content'>
           <Switch>
             <Route path='/guide'  render={() => <GuideContainer/>} />
-            <Route path='/projects/:id/diagram' render={() => <DiagramContainer/>}  />
-            <Route path='/projects/:id' render={() => <ProjectContainer />} />
             <Route path='/machines' render={() => <MachineContainer />} />
             <Route path='/workers' render={() => <WorkerContainer/>} />
             <Route path='/regions' render={() => <RegionsContainer />} />
-            <Route path='/projects' exact={true} render={() => <ProjectsContainer />} />
             <Route path='/units' render={() => <MeasurementUnitContainer />} />
+
             <Route path='/upg' exact={true} render={() => <UnitPriceContainer />} />
             <Route path='/upg/:id' render={() => <UnitPriceCalculationContainer />} />
+            
+            <Route path='/projects' exact={true} render={() => <ProjectsContainer />} />
+            <Route path='/projects/:id' exact={true} render={() => <ProjectContainer />} />
+            <Route path='/projects/:id/diagram' render={() => <DiagramContainer/>}  />
+            <Route path='/projects/:id/workingGroup' render={() => <WorkingGroupContainer/>}  />
+            <Route path='/projects/:id/smtr' render={() => <SmtrContainer/>}  />
+            <Route path='/projects/:id/structure' render={() => <StructureContainer/>}  />
           </Switch>
         </div>
         

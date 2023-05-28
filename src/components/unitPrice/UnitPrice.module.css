@@ -125,6 +125,8 @@
     justify-content: flex-start;
     margin: 20px;
     color: white;
+    max-height: 720px;
+    overflow-y: scroll;
 }
 
 .upgItem {

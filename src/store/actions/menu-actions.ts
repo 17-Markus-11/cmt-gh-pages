@@ -18,7 +18,18 @@ export const switchToModule = (module: string, id: number | undefined): Thunk =>
 
             case "project":
                 data = [
-                    {name: "vmtr", link: `/projects/${id}/vmtr`},
+                    {name: "workingGroup", link: `/projects/${id}/workingGroup`},
+                    {name: "structure", link: `/projects/${id}/structure`},
+                    {name: "smtr", link: `/projects/${id}/smtr`},
+                    {name: "pir", link: `/projects/${id}/pir`},
+                    {name: "networkScheduling", link: `/projects/${id}/networkScheduling`},
+                    {name: "economics", link: `/projects/${id}/economics`},
+                    {name: "risks", link: `/projects/${id}/risks`},
+                    {name: "contracting", link: `/projects/${id}/contracting`},
+                    {name: "finance", link: `/projects/${id}/finance`},
+                    {name: "construction", link: `/projects/${id}/construction`},
+                    {name: "reports", link: `/projects/${id}/reports`},
+                    {name: "dashboards", link: `/projects/${id}/dashboards`},
                     {name: "diagram", link: `/projects/${id}/diagram`}
                 ];
                 break;

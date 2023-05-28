@@ -1,12 +1,12 @@
 import { Component, ReactNode } from "react";
-import { UnitPriceItem } from "./UnitPriceContainer";
 import { RouteComponentProps } from "react-router-dom";
 import style from './UnitPrice.module.css';
 import Table from "../common/table/Table";
 import { UnitPriceResourceInfo, UnitPriceSpecificationInfo } from "./UnitPriceCalculationContainer";
+import { UnitPriceInfo } from "../../store/types/unit-price/UnitPriceInfo";
 
 type Props = {
-    item: UnitPriceItem,
+    item: UnitPriceInfo,
     resourceItems: UnitPriceResourceInfo[],
     specificationItems: UnitPriceSpecificationInfo[],
     getUnitPriceById: (id: number) => void
@@ -20,7 +20,7 @@ class UnitPriceCalculation extends Component<Props & RouteComponentProps<RoutePa
     componentDidMount(): void {
         const id = Number(this.props.match.params.id);
         if (id) {
-            // this.props.getUnitPriceById(id);
+            this.props.getUnitPriceById(id);
         }
     }
 
@@ -88,7 +88,7 @@ class UnitPriceCalculation extends Component<Props & RouteComponentProps<RoutePa
                             <div className={style.upsDescription}>Описание</div>
                         </div>
                         {
-                            this.props.specificationItems.map(specification =>                         
+                            this.props.specificationItems.map(specification =>
                                 <div className={style.upeSummaryData}>
                                     <div className={style.upsCode}>{specification.index}</div>
                                     <div className={style.upsName}>{specification.name}</div>

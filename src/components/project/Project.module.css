@@ -1,8 +1,10 @@
 .projectsContainer {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    align-content: flex-start;
 }
 
 .projectContainer {
@@ -14,9 +16,13 @@
     height: 200px;
     border: solid 2px white;
     color: white;
-    margin-top: 20px;
+    margin: 20px;
     background-color: #090909;
     cursor: pointer;
+}
+
+.link {    
+    height: fit-content
 }
 
 .link a {
@@ -49,4 +55,131 @@
 .projectDate {
     font-size: small;
     border: 0px;
+}
+
+.newProject {
+    height: 100px;
+    width: 100px;
+}
+
+.createProject {
+    height: 300px;
+    width: 400px;
+    margin-top: 100px;
+    border: solid 1px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.createProject input, .createProject textarea, .createProject button {
+    background-color: #090909;
+    color: white;
+    outline: none;
+    resize: none;
+    width: 80%;
+    /* margin: 5% 2%; */
+    font-size: large;
+    font-weight: bold;
+}
+
+.createProject textarea {
+    min-height: 100px;
+}
+
+.createProject button {    
+    width: 60%;
+    height: 30px;
+}
+
+/* project by id */
+
+.projContainer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.projUpload {    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.projUploadContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 200px;
+    width: 350px;
+    margin: 20px;
+    border: solid 2px white;
+}
+
+.projUploadFile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.projUploadFile input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.projUploadFileLabel {
+    cursor: pointer;
+    background-color: #080808;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border: solid 1px white;
+    font-size: large;
+}
+
+.projUploadSubmit {
+    margin: 10px;
+}
+
+.projUploadSubmit button {
+    color: white;
+    background-color: #080808;
+    border: solid 1px white;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: large;
+    height: 40px;
+    width: 200px;
+}
+
+.projInfo {
+    text-align: center;
+}
+
+.projUpgSelect {
+    position: relative;
+    margin: 10px;
+}
+
+.projUpgSelect select { 
+    background-color: #080808;
+    border: solid 1px white;
+    color: white;
+    height: 30px;
+    width: 250px;
+    font-size: medium;
+    text-align: center;
 }

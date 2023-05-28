@@ -51,8 +51,6 @@ const defaultLocalization = {
 
     "menu": {
         "mainMenu": "Главное меню",
-        "diagram": "Диаграмма",
-        "vmtr": "ВМТР",
         "machines": "Машины и Механизмы",
         "workers": "Рабочие",
         "regions": "Регионы",
@@ -65,7 +63,20 @@ const defaultLocalization = {
         "contractor": "Кабинет подрядчика",
         "admin": "Панель администратора",
         "settings": "Настройки",
-        "instruction": "Обучение"
+        "instruction": "Обучение",
+        "workingGroup": "Рабочая группа",
+        "structure": "Структура",
+        "pir": "ПИР",
+        "networkScheduling": "КСП",
+        "economics": "Экономика",
+        "risks": "Риски",
+        "contracting": "Контрактация",
+        "finance": "Финансы",
+        "construction": "Стройка",
+        "reports": "Отчеты",
+        "dashboards": "Дашборды",
+        "diagram": "Диаграмма",
+        "smtr": "ВМТР",
     },
 
     "upg": {
@@ -100,6 +111,45 @@ const defaultLocalization = {
         "chooseRegion": "Выберите регион",
         "chooseFile": "Выберите файл",
         "uploadFile": "Загрузить"
+    },
+
+    "smtr": {
+        "index": "№ п/п",
+        "stage": "Стадия",
+        "title": "Титул",
+        "titleName": "Наименование титула",
+        "brand": "Марка / Том",
+        "techSpecCode": "Номер (шифр)  тех. спецификации / чертежа",
+        "revision": "Рев. тех. док.",
+        "constructive": "Конструктив", // end
+        "position": "Позиция по спец.",
+        "techName": "Наименование и техническая характеристика",
+        "docType": "Тип, марка, обозначение  документа / опросного листа",
+        "code": "Код продукции",
+        "manufacturer": "Завод изготовитель / Поставщик",
+        "units": "Ед. изм.",
+        "quantityInProject": "Кол-во по проекту",
+        "mass": "Масса 1 ед., кг",
+        "note": "Примечания",
+        "consumptionRate": "Норма расхода, %",
+        "consumptionQuantity": "Кол-во с учетом нормы расхода", // end
+        "resourceType": "Тип",
+        "delivery": "Разделение поставки",
+        "pricePerUnit": "Цена за ед., без НДС, руб",
+        "cost": "Стоимость МТР, без НДС, руб", // end
+        "workCode": "Код работ",
+        "workName": "Наименование работ",
+        "coeficient": "K",
+        "quantity": "Кол-во"
+    },
+
+    "structure": {
+        "title": "Титул",
+        "name": "Наименование титула",
+        "mark": "Том",
+        "code": "Шифр проекта",
+        "type": "Тип",        
+        "date": "Дата выдачи РД"
     },
 
     "tasks": {

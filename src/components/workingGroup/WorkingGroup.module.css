@@ -1,0 +1,80 @@
+.workingGroupContainer {
+    color: white;
+    margin: 20px;
+    width: 100%;
+}
+
+.memberContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;    
+    min-width: 302px;
+}
+
+.topMemberChildsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.topMemberBorder {
+    width: calc(100% - 302px);
+    border-bottom: solid 1px white;
+}
+
+.verticalBorder {
+    border-left: solid 1px white;
+    height: 20px;
+}
+
+.lowMemberChildsContainer {    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.member {
+    background-color: #090909;
+    border: solid 1px white;
+    padding: 10px;
+    height: 40px;
+    width: 200px;
+    text-align: center;
+}
+
+.lowMember {
+    margin-left: 80px;
+}
+
+.memberName {
+    font-weight: bold;
+}
+
+.memberRole {
+    font-size: small;
+}
+
+.addMember {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.addMemberInput {
+    background-color: #0f1318;
+    color: white;
+    outline: none;
+    width: 70%;
+}
+
+.addMemberButton {    
+    background-color: #0f1318;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

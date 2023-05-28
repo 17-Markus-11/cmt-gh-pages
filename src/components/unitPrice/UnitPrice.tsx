@@ -1,8 +1,7 @@
 import { Component, ReactNode } from "react"
 import style from './UnitPrice.module.css';
 import { UnitPriceRequest, UnitPriceStatuses, UnitPriceTypes } from "../../store/types/unit-price/UnitPriceRequest";
-// import { UnitPriceInfo } from "../../store/types/unit-price/UnitPriceInfo";
-import { UnitPriceItem } from "./UnitPriceContainer";
+import { UnitPriceInfo } from "../../store/types/unit-price/UnitPriceInfo";
 import { HiChevronDown, HiChevronRight } from 'react-icons/hi';
 import Localization from "../../utils/localization/localization";
 import { NavLink } from "react-router-dom";
@@ -15,7 +14,7 @@ export enum UnitDataSwitchTypes {
 }
 
 type Props = {
-    items: Array<UnitPriceItem>,
+    items: Array<UnitPriceInfo>,
     createUnitPrice: (unitPrice: UnitPriceRequest) => void,
     getUnitPrices: (skip: number, take: number) => void,
     editUnitPrice: (id: number, unitPrice: UnitPriceRequest) => void,
@@ -24,10 +23,14 @@ type Props = {
 
 class UnitPrice extends Component<Props> {
     state = {
-        unitDataSwitch: UnitDataSwitchTypes.EnlargementLvl1
+        unitDataSwitch: UnitDataSwitchTypes.UnitPrices
     };
     
     localization = Localization.getLocalization("upg");
+
+    componentDidMount() {
+        this.props.getUnitPrices(0, 300);
+    }
 
     getLocalizedUnitDataSwitchType = (type: UnitDataSwitchTypes): string => {
         switch (type){
@@ -147,7 +150,7 @@ class UnitPrice extends Component<Props> {
 export default UnitPrice;
 
 type Props1 = {
-    item: UnitPriceItem,
+    item: UnitPriceInfo,
     level: number,
     unitDataSwitch: UnitDataSwitchTypes
 }
@@ -167,21 +170,6 @@ class UpgItem extends Component<Props1> {
         return type === UnitPriceTypes.Group
             ? mainClass
             : `${mainClass} ${style.dataBorder}`;
-    }
-
-    getLocalizedUnitPriceStatus = (status: UnitPriceStatuses | undefined): string => {
-        switch (status){
-            case UnitPriceStatuses.Calculation:
-                return this.localization("calculation");
-            case UnitPriceStatuses.TemporaryRegulations:
-                return this.localization("temporaryRegulations");
-            case UnitPriceStatuses.Canceled:
-                return this.localization("canceled");
-            case UnitPriceStatuses.NoData:
-                return this.localization("noData");
-            default: 
-                throw new Error(`Status ${status} is not supported`);
-        }
     }
 
     render(): ReactNode {
@@ -220,41 +208,26 @@ class UpgItem extends Component<Props1> {
                                     {
                                         this.props.unitDataSwitch === UnitDataSwitchTypes.UnitPrices &&
                                             <div className={style.table}>
-                                                <div className={style.tableItem}><span>0,99</span></div>
-                                                <div className={style.tableItem}><span>0,04</span></div>
-                                                <div className={style.tableItem}><span>800</span></div>
-                                                <div className={style.tableItem}><span>794,13</span></div>
-                                                <div className={style.tableItem}><span>2200</span></div>
-                                                <div className={style.tableItem}><span>1883</span></div>
-                                                <div className={style.tableItem}><span>882,13</span></div>
+                                                <div className={style.tableItem}><span>{item.workerLaborCostPerUnit}</span></div>
+                                                <div className={style.tableItem}><span>{item.machineLaborCostPerUnit}</span></div>
+                                                <div className={style.tableItem}><span>{item.workerPaymentPerHour}</span></div>
+                                                <div className={style.tableItem}><span>{item.workerPaymentPerUnit}</span></div>
+                                                <div className={style.tableItem}><span>{item.machineOperationCostPerHour}</span></div>
+                                                <div className={style.tableItem}><span>{item.machineOperationCostPerUnit}</span></div>
+                                                <div className={style.tableItem}><span>{item.directCostPerUnit}</span></div>
                                             </div>
                                     }
                                     {
                                         this.props.unitDataSwitch === UnitDataSwitchTypes.EnlargementLvl1 &&
-                                            <div className={style.table}>
-                                                <div className={`${style.tableItem} ${style.tableEnlargementCode}`}><span>УБР-00-12</span></div>
-                                                <div className={`${style.tableItem} ${style.tableEnlargementName}`}><span>Монтаж пластиковых трубопроводов, внутренних, м</span></div>
-                                                <div className={`${style.tableItem} ${style.tableEnlargementCoef}`}><span>1.26</span></div>
-                                            </div>
+                                            <UnitPriceEnlargement name={item.enlargement1Code} code={item.enlargement1Name} coef={item.enlargement1Coeficient} />
                                     }
                                     {
                                         this.props.unitDataSwitch === UnitDataSwitchTypes.EnlargementLvl2 &&
-                                            <div className={style.table}>
-                                                <div className={`${style.tableItem} ${style.tableEnlargementCode}`}><span>УБР-00-12</span></div>
-                                                <div className={`${style.tableItem} ${style.tableEnlargementName}`}><span>Монтаж пластиковых трубопроводов, внутренних, м</span></div>
-                                                <div className={`${style.tableItem} ${style.tableEnlargementCoef}`}><span>1.26</span></div>
-                                            </div>
+                                            <UnitPriceEnlargement name={item.enlargement2Code} code={item.enlargement2Name} coef={item.enlargement2Coeficient} />
                                     }
                                     {
                                         this.props.unitDataSwitch === UnitDataSwitchTypes.Properties &&
-                                            <div className={style.table}>
-                                                <div className={`${style.tableItem} ${style.headerUnitPropertiesStatus} ${style.tableUnitPropertiesStatus}`}>
-                                                    <span>{this.getLocalizedUnitPriceStatus(item.status)}</span>
-                                                </div>
-                                                <div className={`${style.tableItem} ${style.headerUnitPropertiesNote} ${style.tableUnitPropertiesNote}`}>
-                                                    <span>Заметка №{item.id}</span>
-                                                </div>
-                                            </div>
+                                            <UnitPriceProperties status={item.status} note={item.note} />
                                     }
                                 </div>
                         }
@@ -268,3 +241,82 @@ class UpgItem extends Component<Props1> {
         )
     }
 }
+
+type Props2 = {
+    name: string,
+    code: string,
+    coef: number
+}
+
+class UnitPriceEnlargement extends Component<Props2> {
+    render(): ReactNode {
+        return (
+            <div className={style.table}>
+                <div className={`${style.tableItem} ${style.tableEnlargementCode}`}><span>{this.props.name}</span></div>
+                <div className={`${style.tableItem} ${style.tableEnlargementName}`}><span>{this.props.code}</span></div>
+                <div className={`${style.tableItem} ${style.tableEnlargementCoef}`}><span>{this.props.coef}</span></div>
+            </div>
+        );
+    }
+}
+
+type Props3 = {
+    status: UnitPriceStatuses,
+    note: string
+}
+
+class UnitPriceProperties extends Component<Props3> {
+    localization = Localization.getLocalization("upg");
+
+    getLocalizedUnitPriceStatus = (status: UnitPriceStatuses | undefined): string => {
+        switch (status){
+            case UnitPriceStatuses.Calculation:
+                return this.localization("calculation");
+            case UnitPriceStatuses.TemporaryRegulations:
+                return this.localization("temporaryRegulations");
+            case UnitPriceStatuses.Canceled:
+                return this.localization("canceled");
+            case UnitPriceStatuses.NoData:
+                return this.localization("noData");
+            default: 
+                throw new Error(`Status ${status} is not supported`);
+        }
+    }
+
+    render(): ReactNode {
+        return (
+            <div className={style.table}>
+                <div className={`${style.tableItem} ${style.headerUnitPropertiesStatus} ${style.tableUnitPropertiesStatus}`}>
+                    <span>{this.getLocalizedUnitPriceStatus(this.props.status)}</span>
+                </div>
+                <div className={`${style.tableItem} ${style.headerUnitPropertiesNote} ${style.tableUnitPropertiesNote}`}>
+                    <span>{this.props.note}</span>
+                </div>
+            </div>
+        );
+    }
+}
+
+// type Props2 = {
+    
+// }
+
+// class name extends Component<Props1> {
+//     render(): ReactNode {
+//         return (
+            
+//         );
+//     }
+// }
+
+// type Props2 = {
+    
+// }
+
+// class name extends Component<Props1> {
+//     render(): ReactNode {
+//         return (
+            
+//         );
+//     }
+// }
